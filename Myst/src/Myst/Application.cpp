@@ -4,9 +4,13 @@
 
 #include "Application.h"
 #include <iostream>
+#include <spdlog/spdlog.h>
+#include "Log.h"
+
 
 namespace Myst {
     Application::Application() {
+        MYST_CORE_INFO("Client started");
     }
 
     Application::~Application() {
@@ -15,6 +19,7 @@ namespace Myst {
 
     void Application::Run() {
         while (true) {
+
         }
     }
 

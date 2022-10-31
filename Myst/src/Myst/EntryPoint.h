@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "Application.h"
+#include "Log.h"
 
 #ifndef MYST_ENTRYPOINT_H
 #define MYST_ENTRYPOINT_H
@@ -11,6 +12,8 @@
 #ifdef MYST_PLATFORM_MAC
 
 int main() {
+    Myst::Log::Init();
+
     auto app = Myst::CreateApplication();
     app->Run();
     delete app;
