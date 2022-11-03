@@ -3,8 +3,6 @@
 //
 
 #include "Application.h"
-#include <iostream>
-#include <spdlog/spdlog.h>
 #include "Log.h"
 
 

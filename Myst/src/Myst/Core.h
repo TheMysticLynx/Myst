@@ -39,3 +39,5 @@
 #ifdef MYST_PLATFORM_MAC
 #define MYST_API
 #endif
+
+#define BIT(x) 1 << x

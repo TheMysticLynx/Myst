@@ -4,6 +4,8 @@
 #include <memory>
 #include "Core.h"
 #include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
+
 #ifndef MYST_LOG_H
 #define MYST_LOG_H
 
@@ -32,6 +34,5 @@ namespace Myst {
 #define MYST_CLIENT_WARN(...) Myst::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define MYST_CLIENT_ERROR(...) Myst::Log::GetClientLogger()->error(__VA_ARGS__)
 #define MYST_CLIENT_FATAL(...) Myst::Log::GetClientLogger()->fatal(__VA_ARGS__)
-
 
 #endif //MYST_LOG_H

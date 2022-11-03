@@ -16,5 +16,4 @@ namespace Myst {
         s_ClientLogger= spdlog::stdout_color_mt("client");
         s_ClientLogger->set_level(spdlog::level::trace);
     }
-
 }
