@@ -12,7 +12,7 @@ add_subdirectory(Lib/glfw-3-3-8)
 add_subdirectory(Lib/spdlog-1.10.0)
 add_subdirectory(Lib/glad)
 
-add_library(Myst SHARED src/Myst/Application.cpp src/Myst/Application.h src/Myst/Core.h src/Myst.h src/Myst/EntryPoint.h src/Myst/Log.cpp src/Myst/Log.h src/Myst/Events/Event.h src/Myst/Events/KeyEvent.h src/Myst/Events/MouseEvent.h src/Myst/Events/ApplicationEvent.h src/Myst/pch.h)
+add_library(Myst SHARED src/Myst/Application.cpp src/Myst/Application.h src/Myst/Core.h src/Myst.h src/Myst/EntryPoint.h src/Myst/Log.cpp src/Myst/Log.h src/Myst/Events/Event.h src/Myst/Events/KeyEvent.h src/Myst/Events/MouseEvent.h src/Myst/Events/ApplicationEvent.h src/Myst/pch.h src/Myst/Window.h src/Myst/GlfwWindow.cpp src/Myst/GlfwWindow.h)
 
 target_include_directories(Myst PRIVATE "src")
 

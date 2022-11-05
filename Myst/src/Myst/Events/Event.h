@@ -34,6 +34,7 @@ namespace Myst {
     MYST_API class Event{
         friend class EventDispatcher;
     public:
+        virtual ~Event()= default;
         [[nodiscard]]virtual EventType GetEventType() const = 0;
         [[nodiscard]]virtual const char* GetName() const = 0;
         [[nodiscard]]virtual int GetCategoryFlags() const = 0;
@@ -50,10 +51,10 @@ namespace Myst {
         using EventFn = std::function<bool(T&)>;
 
     public:
-        EventDispatcher(Event& event)
+        explicit EventDispatcher(Event& event)
         : m_Event(event) {}
 
-        template<typename T>
+        template<class T>
         bool Dispatch(EventFn<T> func) {
             if (m_Event.GetEventType() == T::GetStaticType()) {
                 m_Event.m_Handled = func(*(T*)&m_Event);

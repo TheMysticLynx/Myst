@@ -40,4 +40,14 @@
 #define MYST_API
 #endif
 
+#ifdef DEBUG
+
+#define ASSERT(x) x
+
+#else
+
+#define ASSERT(...)
+
+#endif
+
 #define BIT(x) 1 << x
